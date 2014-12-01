@@ -24,11 +24,6 @@ export HISTIGNORE="pwd:ls:ls -ltr:"
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# Added for git completion. Load the git completion file if it's available
-if [ -f ~/.git-completion.bash ]; then
-  source ~/.git-completion.bash
-fi
-
 # Define alias that returns the current git branch name
 alias __git_ps1="git branch 2>/dev/null | grep '*' | sed 's/* \(.*\)/(\1)/'"
 
