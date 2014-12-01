@@ -1,14 +1,16 @@
 alias ls="ls -G"
 alias ll="ls -lahnG"       #Long list the file with size in human understandable form.
+alias lv="ls -lF"                       #Classify the file type by appending special characters.
 alias hm="cd ~"
 alias ..="cd .."
+alias reload="source ~/.bash_profile"  #reloads the bash profile
 
 #All files that have been removed from the file system are added to the index as deleted.
-alias grma='git ls-files --deleted | xargs git rm'
-alias reload="source ~/.bash_profile"  #reloads the bash profile
-alias lv="ls -F"                       #Classify the file type by appending special characters.
 alias g='git'
 alias r='rails'
+alias grma='git ls-files --deleted | xargs git rm'
+
+#Show and hide hidden files in finder on Mac
 alias show='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hide='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
