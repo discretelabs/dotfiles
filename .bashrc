@@ -15,7 +15,6 @@ alias show='defaults write com.apple.finder AppleShowAllFiles YES; killall Finde
 alias hide='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 export CLICOLOR=1
-#export LSCOLORS=ExFxCxDxBxegedabagacad
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export HISTSIZE=20
 export HISTCONTROL=erasedups
@@ -33,13 +32,8 @@ fi
 # Define alias that returns the current git branch name
 alias __git_ps1="git branch 2>/dev/null | grep '*' | sed 's/* \(.*\)/(\1)/'"
 
-# Show git branch name in terminal prompt 
+# Show git branch name in terminal prompt
 export PS1='[\D{%T}] \[\033[01;32m\]\u@\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] $(__git_ps1) $ '
-
-#Another way to show git branch in command prompt
-#export PS1='\[\033[01;32m\]\u@\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 "\[\033[01;33m\](%s)\[\033[00m\]")$ '
-#export PS1='$(__git_ps1) > '
-#export PS1="\u@\w$ "   #Original prompt settings
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
