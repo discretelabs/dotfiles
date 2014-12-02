@@ -31,7 +31,7 @@
 [difftool "atom"]
 	prompt = false
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = /usr/local/bin/atom #/usr/bin/vimdiff 
+	path = /usr/local/bin/atom #/usr/bin/vimdiff
 
 [push]
 	default = simple
@@ -43,22 +43,38 @@
 
 [alias]
 	a = add
+	b = branch
+
+	c = commit -v
+	co = checkout
+	ca = commit -v --amend
+	
+	d = diff --color-words -w
+	ds = diff --color-words -w --staged
+
+	f = fetch
+	fix = commit --amend -C HEAD
+
+	l = log --decorate=short
+	ls = ls-files
+	logg = log --decorate --oneline --abbrev-commit --all -n 20
+	last = log -1 HEAD
+
+	m = merge
+	mc = merge --no-ff --commit
+
+	p = push
+	pu = push --set-upstream origin
+	pull = pull -ff-only
+
+	r = rebase
+	rc = rebase --continue
+	ra = rebase --abort
+	rs = rebase --skip
+	rs = remote show
+
 	s = status
 	sb = status -s -b
-	c = commit -v
-	b = branch
-	m = merge
-	r = rebase
-	f = fetch
-	pull = pull -ff-only
-	push = push
-	diff = diff --color-words -w
-	diffs = diff --staged
-	log = log
-	#logg = log --graph --decorate --oneline --abbrev-commit --all
-	logg = log --decorate --oneline --abbrev-commit --all -n 20
-	co = checkout
-	rs = remote show
-	last = log -1 HEAD
+
 	untrack = rm --cached
 	unstage = reset HEAD --
