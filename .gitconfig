@@ -26,7 +26,6 @@
 	editor = nano
 	excludesfile = /Users/[username]/.gitignore_global
 	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	excludesfile = ~/.gitignore
 
 [difftool "atom"]
 	prompt = false
@@ -48,7 +47,7 @@
 	c = commit -v
 	co = checkout
 	ca = commit -v --amend
-	
+
 	d = diff --color-words -w
 	ds = diff --color-words -w --staged
 
