@@ -42,7 +42,12 @@
 
 [alias]
 	a = add
+	aa = add --all
+  ap = add --patch
+
 	b = branch
+	branches = for-each-ref --sort=-committerdate --format="%(color:blue) %(committerdate:short) | %(color:red)%(color:bold)%(authorname) | %(authordate:relative) | %(color:white) %(refname:short)" refs/heads refs/remotes | sed 's/refs\/heads\///g'
+
 
 	c = commit -v
 	co = checkout
@@ -61,8 +66,12 @@
 
 	m = merge
 	mc = merge --no-ff --commit
+	mg = branch --merged
+
+	nmg = branch --no-merged
 
 	p = push
+	pap = push --all --prune
 	pu = push --set-upstream origin
 	pull = pull -ff-only
 
@@ -75,5 +84,8 @@
 	s = status
 	sb = status -s -b
 
+	undo = git reset --soft HEAD^ #Undo last commit without deleting changes
 	untrack = rm --cached
-	unstage = reset HEAD --
+	unstage = reset HEAD --				#Unstage a file - step 2 of 'undo'
+
+	up = !git fetch origin && git rebase origin/master
