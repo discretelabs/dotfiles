@@ -10,6 +10,11 @@ alias g='git'
 alias r='rails'
 alias grma='git ls-files --deleted | xargs git rm'
 
+alias hm='heroku run rake --trace db:migrate --app' #heroku migrate
+alias hr='heroku restart --app' #heroku restart app
+alias hl='heroku logs --tail' #heroku logs
+alias hp='git push heroku master' #push to heroku
+
 #Show and hide hidden files in finder on Mac
 alias show='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hide='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
