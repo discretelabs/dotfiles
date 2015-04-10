@@ -14,6 +14,12 @@ alias grma='git ls-files --deleted | xargs git rm'
 alias show='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hide='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
+alias hm='heroku run rake --trace db:migrate --app' #heroku migrate
+alias hr='heroku restart --app' #heroku restart app
+alias hl='heroku logs --tail' #heroku logs
+alias hp='git push heroku master' #push to heroku
+alias pgr='pg_restore --verbose --clean --no-acl --no-owner -h localhost -d ' #supply dbname and path to database.dump file to be restored. Postgre Restore
+
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export HISTSIZE=20
