@@ -43,11 +43,13 @@
 [alias]
 	a = add
 	aa = add --all
-  ap = add --patch
+    ap = add --patch
 
 	b = branch
-	branches = for-each-ref --sort=-committerdate --format="%(color:blue) %(committerdate:short) | %(color:red)%(color:bold)%(authorname) | %(authordate:relative) | %(color:white) %(refname:short)" refs/heads refs/remotes | sed 's/refs\/heads\///g'
-
+	#branch listing
+	bl = for-each-ref --sort=-committerdate --format="%(color:blue) %(committerdate:short) | %(color:red)%(color:bold)%(authorname) | %(authordate:relative) | %(color:white) %(refname:short)" refs/heads refs/remotes | sed 's/refs\/heads\///g'
+	bm = branch --merged
+	bnm = branch --no-merged
 
 	c = commit -v
 	co = checkout
@@ -61,14 +63,11 @@
 
 	l = log --decorate=short
 	ls = ls-files
-	logg = log --decorate --oneline --abbrev-commit --all -n 20
+	lg = log --decorate --oneline --abbrev-commit --all -n 20
 	last = log -1 HEAD
 
 	m = merge
 	mc = merge --no-ff --commit
-	mg = branch --merged
-
-	nmg = branch --no-merged
 
 	p = push
 	pap = push --all --prune
@@ -79,10 +78,12 @@
 	rc = rebase --continue
 	ra = rebase --abort
 	rs = rebase --skip
-	rs = remote show
+
+	rms = remote show
 
 	s = status
 	sb = status -s -b
+	stash-unaply = '!git stash show -p | git apply -R'
 
 	undo = git reset --soft HEAD^ #Undo last commit without deleting changes
 	untrack = rm --cached
