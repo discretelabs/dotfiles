@@ -1,7 +1,7 @@
 alias ls="ls -G"
 alias ll="ls -lahnG"       #Long list the file with size in human understandable form.
 alias lv="ls -lF"                       #Classify the file type by appending special characters.
-alias hm="cd ~"
+alias h="cd ~"
 alias ..="cd .."
 alias reload="source ~/.bash_profile"  #reloads the bash profile
 
@@ -14,6 +14,9 @@ alias hm='heroku run rake --trace db:migrate --app' #heroku migrate
 alias hr='heroku restart --app' #heroku restart app
 alias hl='heroku logs --tail' #heroku logs
 alias hp='git push heroku master' #push to heroku
+alias pgr='pg_restore --verbose --clean --no-acl --no-owner -h localhost -d ' #supply dbname and path to database.dump file to be restored. Postgre Restore
+
+alias ga="git config --get-regexp '^alias\.'"
 
 #Show and hide hidden files in finder on Mac
 alias show='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
@@ -29,6 +32,9 @@ export HISTIGNORE="pwd:ls:ls -ltr:"
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+#Load git completion
+source ~/.git-completion.sh
+
 # Define alias that returns the current git branch name
 alias __git_ps1="git branch 2>/dev/null | grep '*' | sed 's/* \(.*\)/(\1)/'"
 
@@ -38,5 +44,9 @@ export PS1='[\D{%T}] \[\033[01;32m\]\u@\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+### Add textmate as the text editor
+export EDITOR="/usr/local/bin/mate -w"
+
 # Adding project-specific binstubs to PATH
 export PATH="./bin:$PATH"
+source /usr/local/share/instantclient/instantclient.sh
