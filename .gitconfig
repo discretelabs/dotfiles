@@ -55,8 +55,6 @@
     ap = add --patch
 
 	b = branch
-	#branch listing
-	bl = for-each-ref --sort=-committerdate --format="%(color:blue) %(committerdate:short) | %(color:red)%(color:bold)%(authorname) | %(authordate:relative) | %(color:white) %(refname:short)" refs/heads refs/remotes | sed 's/refs\/heads\///g'
 	bm = branch --merged
 	bnm = branch --no-merged
 
