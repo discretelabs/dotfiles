@@ -17,6 +17,10 @@ alias hp='git push heroku master' #push to heroku
 alias pgr='pg_restore --verbose --clean --no-acl --no-owner -h localhost -d ' #supply dbname and path to database.dump file to be restored. Postgre Restore
 
 alias ga="git config --get-regexp '^alias\.'"
+alias find='find ~/ -iname'
+alias mkdir='mkdir -pv'
+alias code='cd ~/code'
+alias gbl="git for-each-ref --sort=-committerdate --format='%(color:blue) %(committerdate:short) | %(color:red)%(color:bold)%(authorname) | %(authordate:relative) | %(color:white) %(refname:short)' refs/heads refs/remotes | sed 's/refs\/heads\///g'"
 
 #Show and hide hidden files in finder on Mac
 alias show='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
