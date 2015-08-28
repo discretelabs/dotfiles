@@ -72,6 +72,9 @@
 
 	l = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short --decorate=short
 	last = log -1 HEAD
+	lg = log --decorate --oneline --abbrev-commit --all -n 20
+	ll = log --numstat --decorate 
+	ls = ls-files
 
 	m = merge
 	mc = merge --no-ff --commit
