@@ -68,6 +68,7 @@
 	f = fetch
 	fix = commit --amend -C HEAD	#amend, commit and reuse the last commit message
 	
+	in = commit -am 'Initial commit' --allow-empty
 
 	l = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short#log --decorate=short
 	ls = ls-files
