@@ -70,9 +70,7 @@
 	
 	in = commit -am 'Initial commit' --allow-empty
 
-	l = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short#log --decorate=short
-	ls = ls-files
-	lg = log --decorate --oneline --abbrev-commit --all -n 20
+	l = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short --decorate=short
 	last = log -1 HEAD
 
 	m = merge
