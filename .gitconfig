@@ -68,7 +68,7 @@
 	f = fetch
 	fix = commit --amend -C HEAD
 
-	l = log --decorate=short
+	l = log --pretty=format:'%C(yellow)%h %Cred%ad %Cblue%an%Cgreen%d %Creset%s' --date=short#log --decorate=short
 	ls = ls-files
 	lg = log --decorate --oneline --abbrev-commit --all -n 20
 	last = log -1 HEAD

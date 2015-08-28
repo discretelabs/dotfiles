@@ -21,6 +21,7 @@ alias find='find ~/ -iname'
 alias mkdir='mkdir -pv'
 alias code='cd ~/code'
 alias gbl="git for-each-ref --sort=-committerdate --format='%(color:blue) %(committerdate:short) | %(color:red)%(color:bold)%(authorname) | %(authordate:relative) | %(color:white) %(refname:short)' refs/heads refs/remotes | sed 's/refs\/heads\///g'"
+alias glop="git log --pretty=format:'%C(yellow)%h|%Cred%ad|%Cblue%an|%Cgreen%d %Creset%s' --date=short | column -ts'|' | less -r"
 
 #Show and hide hidden files in finder on Mac
 alias show='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
