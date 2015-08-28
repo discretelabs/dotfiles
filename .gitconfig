@@ -80,7 +80,7 @@
 	mc = merge --no-ff --commit
 
 	p = push
-	pap = push --all --prune
+	pp = push --all --prune
 	pu = push --set-upstream origin
 	pull = pull -ff-only
 
@@ -89,11 +89,11 @@
 	ra = rebase --abort
 	rs = rebase --skip
 
-	rms = remote show
+	rts = remote show
 
 	s = status
 	sb = status -s -b
-	stash-unaply = '!git stash show -p | git apply -R'
+	srm = !git stash show -p | git apply -R #stash-unapply
 
 	undo = git reset --soft HEAD^ #Undo last commit without deleting changes
 	untrack = rm --cached
