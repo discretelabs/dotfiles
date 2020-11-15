@@ -1,0 +1,53 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "petere/postgresql"
+tap "sambadevi/powerlevel9k"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# Distributed revision control system
+brew "git"
+# Portable Foreign Function Interface library
+brew "libffi"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
+# Core application library for C
+brew "glib"
+# Tools and libraries to manipulate images in many formats
+brew "imagemagick"
+# Mac App Store command-line interface
+brew "mas"
+# Simplified and community-driven man pages
+brew "tldr"
+# UNIX shell (command interpreter)
+brew "zsh"
+# A badass zsh theme with more power than a normal earthling
+brew "sambadevi/powerlevel9k/powerlevel9k"
+cask "iterm2"
+
+mas "1Blocker", id: 1107421413
+mas "1Password", id: 443987910
+# mas "1Password 7", id: 1333542190
+mas "Agenda", id: 1287445660
+# mas "Asset Catalog Creator", id: 866571115
+mas "BBEdit", id: 404009241
+mas "Bible Study", id: 472790630
+mas "Developer", id: 640199958
+mas "Disk Diag", id: 672206759
+# mas "Evernote", id: 406056744
+mas "Gemini 2", id: 1090488118
+# mas "Keynote", id: 409183694
+mas "Kindle", id: 405399194
+# mas "Microsoft To Do", id: 1274495053
+# mas "NextDNS", id: 1464122853
+mas "NordVPN IKE", id: 1116599239
+# mas "Numbers", id: 409203825
+# mas "Pages", id: 409201541
+mas "Pixelmator", id: 407963104
+mas "Slack", id: 803453959
+mas "Spark", id: 1176895641
+mas "Things", id: 904280696
+# mas "TweetDeck", id: 485812721
+mas "WhatsApp", id: 1147396723
+# mas "Writer", id: 810962929
+mas "Xcode", id: 497799835
